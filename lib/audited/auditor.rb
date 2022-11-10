@@ -170,6 +170,10 @@ module Audited
       # List of attributes that are audited.
       def audited_attributes
         audited_attributes = attributes.except(*self.class.non_audited_columns)
+        audited_attributes.each do |key, value|
+          safe_value = value.is_a?(String) ? ERB::Util.h(value) : value
+          audited_attributes[key] = safe_value
+        end
         redact_and_normalize_changes(audited_attributes)
       end
 
