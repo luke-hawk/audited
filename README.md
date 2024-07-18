@@ -27,7 +27,7 @@ Audited is currently ActiveRecord-only. In a previous life, Audited worked with 
 Add the gem to your Gemfile:
 
 ```ruby
-gem "audited", "~> 4.9"
+gem "audited", "~> 4.9.1"
 ```
 
 Then, from your Rails app directory, create the `audits` table:
@@ -51,7 +51,6 @@ $ rake db:migrate
 ```
 
 Upgrading will only make changes if changes are needed.
-
 
 ## Usage
 
@@ -274,6 +273,7 @@ company.associated_audits.last.auditable # => #<User name: "Steve Richert">
 ```
 
 You can access records' own audits and associated audits in one go:
+
 ```ruby
 company.own_and_associated_audits
 ```
@@ -362,6 +362,7 @@ end
 
 If you want to extend or modify the audit model, create a new class that
 inherits from `Audited::Audit`:
+
 ```ruby
 class CustomAudit < Audited::Audit
   def some_custom_behavior
@@ -369,7 +370,9 @@ class CustomAudit < Audited::Audit
   end
 end
 ```
+
 Then set it in an initializer:
+
 ```ruby
 # config/initializers/audited.rb
 
@@ -380,7 +383,7 @@ end
 
 ## Support
 
-You can find documentation at: http://rdoc.info/github/collectiveidea/audited
+You can find documentation at: <http://rdoc.info/github/collectiveidea/audited>
 
 Or join the [mailing list](http://groups.google.com/group/audited) to get help or offer suggestions.
 

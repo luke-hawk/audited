@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## 4.9.0 (2019-07-17)
+## 4.9.1 (2024-07-18)
 
 Breaking changes
 
@@ -151,7 +151,6 @@ Fixed
   [#384](https://github.com/collectiveidea/audited/pull/384)
 - Fix duplicate deceleration warnings
   [#399](https://github.com/collectiveidea/audited/pull/399)
-
 
 ## 4.5.0 (2017-05-22)
 
